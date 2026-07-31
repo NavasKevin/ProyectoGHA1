@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Información general sobre CI/CD, su funcionamiento, herramientas, ventajas y un caso de uso práctico.">
+  <title>CI/CD - Caso de uso</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">CASO DE USO INVESTIGADO</p>
+      <h1>CI/CD</h1>
+      <p class="hero-text">
+        Integración Continua y Entrega o Despliegue Continuo para automatizar
+        el desarrollo, las pruebas y la publicación de software.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>¿Qué es CI/CD?</h2>
+        <p>
+          CI/CD es un conjunto de prácticas de desarrollo de software que permite
+          automatizar y mejorar el proceso que va desde la modificación del código
+          hasta la entrega de una nueva versión de una aplicación.
+        </p>
+        <p>
+          El objetivo principal es detectar errores rápidamente, reducir tareas
+          manuales y conseguir entregas de software más frecuentes, confiables y
+          controladas.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="badge">CI</span>
+            <h3>Integración Continua</h3>
+            <p>
+              Consiste en integrar los cambios de código de forma frecuente en un
+              repositorio compartido. Cada cambio puede activar automáticamente
+              procesos de compilación y pruebas para detectar problemas cuanto antes.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="badge">CD</span>
+            <h3>Entrega Continua</h3>
+            <p>
+              Mantiene el software en un estado preparado para ser publicado.
+              Las etapas posteriores al desarrollo se automatizan para facilitar
+              entregas rápidas y repetibles.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="badge">CD</span>
+            <h3>Despliegue Continuo</h3>
+            <p>
+              Lleva la automatización un paso más allá: los cambios que superan
+              las validaciones pueden llegar automáticamente al entorno de producción.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>¿Cómo funciona un pipeline CI/CD?</h2>
+        <p>
+          Un pipeline es una secuencia automatizada de etapas que valida y prepara
+          el software para su entrega.
+        </p>
+
+        <div class="pipeline">
+          <div class="pipeline-step">
+            <strong>01</strong>
+            <h3>Código</h3>
+            <p>El desarrollador realiza cambios y los envía al repositorio.</p>
+          </div>
+          <div class="pipeline-step">
+            <strong>02</strong>
+            <h3>Build</h3>
+            <p>El sistema compila, empaqueta o prepara la aplicación.</p>
+          </div>
+          <div class="pipeline-step">
+            <strong>03</strong>
+            <h3>Pruebas</h3>
+            <p>Se ejecutan pruebas automatizadas para comprobar la calidad.</p>
+          </div>
+          <div class="pipeline-step">
+            <strong>04</strong>
+            <h3>Entrega</h3>
+            <p>El artefacto validado queda listo para su publicación.</p>
+          </div>
+          <div class="pipeline-step">
+            <strong>05</strong>
+            <h3>Despliegue</h3>
+            <p>La aplicación se publica en el entorno correspondiente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Herramientas utilizadas en CI/CD</h2>
+        <div class="tool-grid">
+          <div class="tool">
+            <h3>GitHub Actions</h3>
+            <p>Permite automatizar flujos de trabajo directamente dentro de GitHub.</p>
+          </div>
+          <div class="tool">
+            <h3>GitLab CI/CD</h3>
+            <p>Integra pipelines de automatización con repositorios y proyectos de GitLab.</p>
+          </div>
+          <div class="tool">
+            <h3>Jenkins</h3>
+            <p>Servidor de automatización ampliamente utilizado para construir pipelines personalizados.</p>
+          </div>
+          <div class="tool">
+            <h3>Azure DevOps</h3>
+            <p>Ofrece servicios para planificar, desarrollar, probar y entregar software.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container two-columns">
+        <div>
+          <h2>Ventajas</h2>
+          <ul class="list">
+            <li>Detecta errores de forma temprana.</li>
+            <li>Reduce tareas manuales y repetitivas.</li>
+            <li>Facilita entregas frecuentes y controladas.</li>
+            <li>Mejora la trazabilidad de los cambios.</li>
+            <li>Ayuda a mantener una calidad de software constante.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Desafíos</h2>
+          <ul class="list">
+            <li>Requiere una configuración inicial adecuada.</li>
+            <li>Las pruebas automatizadas deben mantenerse actualizadas.</li>
+            <li>Los pipelines necesitan monitoreo y mantenimiento.</li>
+            <li>La gestión de secretos y permisos debe realizarse cuidadosamente.</li>
+            <li>Una mala configuración puede automatizar errores.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="case-study">
+          <p class="eyebrow">EJEMPLO PRÁCTICO</p>
+          <h2>Aplicación web para una empresa</h2>
+          <p>
+            Supongamos que un equipo desarrolla una aplicación web y trabaja con
+            un repositorio Git. Cada vez que un desarrollador incorpora cambios,
+            el pipeline CI/CD puede ejecutar automáticamente una serie de controles.
+          </p>
+
+          <ol class="case-list">
+            <li><strong>Se realiza un commit:</strong> el código nuevo se sube al repositorio.</li>
+            <li><strong>Se ejecuta el pipeline:</strong> se instala el proyecto y se prepara la aplicación.</li>
+            <li><strong>Se ejecutan pruebas:</strong> se comprueba que los cambios no rompan funcionalidades existentes.</li>
+            <li><strong>Se genera el artefacto:</strong> se prepara una versión lista para ser entregada.</li>
+            <li><strong>Se despliega:</strong> después de superar las validaciones, la versión llega al entorno definido.</li>
+          </ol>
+
+          <p class="highlight">
+            Resultado: el equipo puede publicar cambios de manera más rápida,
+            repetible y con menor dependencia de procesos manuales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conclusion">
+      <div class="container">
+        <h2>Conclusión</h2>
+        <p>
+          CI/CD representa una estrategia fundamental para modernizar el desarrollo
+          de software. Al automatizar la integración, las pruebas y la entrega,
+          los equipos pueden reducir riesgos y responder con mayor rapidez a las
+          necesidades del proyecto.
+        </p>
+        <p>
+          Su implementación debe acompañarse de buenas prácticas, pruebas confiables,
+          control de versiones, seguridad y monitoreo continuo.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Proyecto académico — Caso de uso CI/CD</p>
+    </div>
+  </footer>
+</body>
+</html>
